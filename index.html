@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <title>sultanbaev by sultanbaev</title>
+    <title>Monokai styling for linux applications by sultanbaev</title>
   </head>
 
   <body>
@@ -59,7 +59,7 @@
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating alias</h3>
 
-<p>Add to ~/bashrc</p>
+<p align="right">Add to ~/bashrc</p>
 <code>alias con='nano ~/.i3/config'<br>
 alias inst='sudo pacman -S'<br>
 alias update='yaourt -Syua'</code>
@@ -78,7 +78,7 @@ alias update='yaourt -Syua'</code>
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bash promt</h3>
 
-<p>Add to ~/bashrc</p>
+<p align="right">Add to ~/bashrc</p>
 <code>PS1='\[\e[0;32m\]\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]>>>>>>>>>>>>>>>>>>>>\[\e[m\] \[\e[1;37m\]'</code>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -89,7 +89,7 @@ alias update='yaourt -Syua'</code>
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Execute program when terminal starts</h3>
 
-<p>Add to ~/bashrc</p>
+<p align="right">Add to ~/bashrc</p>
 <code>if [ -f /usr/bin/screenfetch ]; then screenfetch; fi<br>
 if [ -f /usr/bin/ponysay ]; then ponysay -q; fi</code>
 
@@ -101,7 +101,7 @@ if [ -f /usr/bin/ponysay ]; then ponysay -q; fi</code>
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Zathura</h3>
 
-<p>Add to ~/.config/zathura/zathurarc</p>
+<p align="right">Add to ~/.config/zathura/zathurarc</p>
 <p>Default window colors</p>
 <code>set default-fg "#75715E"<br>
 set default-bg "#272822"</code>
@@ -143,7 +143,7 @@ set recolor-darkcolor "#75715E"</code>
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MPlayer</h3>
 
-<p>Add to ~/.mplayer/config</p>
+<p align="right">Add to ~/.mplayer/config</p>
 <p>Increase volume in 10 times</p>
 <code>softvol=1
 softvol-max=1000</code>
@@ -152,7 +152,7 @@ softvol-max=1000</code>
 subpos=80</code>
 <p>Progress bar position</p>
 <code>progbar-align=0</code>
-<p>Add to ~/.mplayer/input.conf</p>
+<p align="right">Add to ~/.mplayer/input.conf</p>
 <p>Seek timeframe options</p>
 <code>RIGHT seek +2<br>
 LEFT seek -2<br>
@@ -169,7 +169,7 @@ PGDWN seek -60</code>
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>i3 window manager</h3>
 
-<p>Add to ~/.i3/config</p>
+<p align="right">Add to ~/.i3/config</p>
 <p>Rofi</p>
 <code>bindsym $mod+d exec rofi -show run -font "Terminus Re33 Bold 11" -fg "#FFFFFF" -bg "#000000" -hlfg "#000000" -hlbg "#A6E22E" -bc "#A6E22E" -hide-scrollbar -o 85</code>
 
@@ -316,7 +316,7 @@ for_window [class="urxvt"] move container to workspace "10: term", workspace "10
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conky in i3bar</h3>
 
-<p>~/.i3/conky_bar</p>
+<p align="right">~/.i3/conky_bar</p>
 <code>background no<br>
 out_to_console yes<br>
 out_to_x no<br>
@@ -327,7 +327,7 @@ color2 FD971F<br>
 TEXT<br>
 $uptime ::: ${cpu cpu0}% ${exec sensors | grep 'Core 0:' | cut -c18-19}'C ::: ${mem} ::: ${fs_free /} ::: ${execpi 120 python ~/.i3/gmail.py} ::: ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ UNNT temperature}'C ::: ${time %H:%M} :::</code>
 
-<p>~/.i3/gmail.py</p>
+<p align="right">~/.i3/gmail.py</p>
 <code>#!/usr/bin/env python<br>
 from urllib.request import FancyURLopener<br>
 email = 'USERNAME' # @gmail.com can be left out<br>
@@ -349,10 +349,10 @@ print(fullcount + ' new')</code>
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lock screen with scrot and i3lock</h3>
 
-<p>Add to ~/.i3/config</p>
+<p align="right">Add to ~/.i3/config</p>
 <code>bindsym $mod+l exec ~/.i3/i3lock.sh</code>
 
-<p>~/.i3/i3lock.sh</p>
+<p align="right">~/.i3/i3lock.sh</p>
 <code>#!/bin/sh<br>
  scrot ~/.i3/screen_locked.png<br>
 mogrify -scale 10% -scale 1000% ~/.i3/screen_locked.png<br>
