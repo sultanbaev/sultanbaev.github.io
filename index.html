@@ -194,7 +194,7 @@ set recolor-darkcolor "#75715E"</code>
 Shift + 3 - change audio source</code>
 
 <p>Increase volume for particular file</p>
-<code>mplayer file.name -softvol -softvol-max 300</code>
+<code>mplayer FILE.NAME -softvol -softvol-max 300</code>
 
 <p align="right">Add to <font color="#A6E22E">~/.mplayer/config</font></p>
 <p>Increase volume in 10 times</p>
@@ -536,10 +536,10 @@ sudo date MMDDhhmm</code>
 
 <code>sudo apt-get install ntfs-3g<br>
 sudo apt-get install ntfs-3g disk-manager<br>
-mount -t ntfs-3g /dev/sdaX /mount/where</code>
+mount -t ntfs-3g /dev/sdaX /MOUNT/WHERE</code>
 
 <p align="right">Add in <font color="#A6E22E">/etc/fstab</font></p>
-<code>/dev/sdaX /mount/where ntfs-3g umask=0,user,locale=ru_RU.UTF-8 0 0</code>
+<code>/dev/sdaX /MOUNT/WHERE ntfs-3g umask=0,user,locale=ru_RU.UTF-8 0 0</code>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -682,12 +682,23 @@ git push -u origin master</code>
 
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Command promt commands</h3>
 
-<code>cat /paht/to/file | grep keyword | cut -c16-21<br>
-dd bs=4M if=/path/to/file.iso of=/dev/sdx && sync<br>
-^old^new<br>
-sudo !! - last command as root<br>
-scrot -cd5<br>
-yaourt -S name --noconfirm</code>
+<code>cat /PATH/TO/FILE | grep keyword | cut -c16-21</code>
+<code>dd bs=4M if=/PATH/TO/FILE.iso of=/dev/sdx && sync</code>
+<code>^old^new</code>
+<code>sudo !!</code>
+<code>scrot -cd5</code>
+<code>yaourt -S NAME --noconfirm</code>
+<p align="right">Pack and split</p>
+<code>tar -czvf - --exclude=PATH/TO/EXCLUDE --exclude='*.TYPE_TO_EXCLUDE' /SOURCE/OF/FILES/ /DESTINATION/backup.tar.gz | split -b 2048m - /DESTINATION/backup.tar.gz</code>
+<p align="right">Cat</p>
+<code>cat backup.tar.gzaa backup.tar.gzab backup.tar.gzac > backup.tar.gz</code>
+<p align="center">or</p>
+<code>cat backup.tar.* > backup.tar.gz</code>
+<p align="right">Extract</p>
+<code>tar -xzvf backup.tar.gz</code>
+
+
+
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
