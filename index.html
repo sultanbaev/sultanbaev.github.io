@@ -474,7 +474,8 @@ i3lock -i ~/.i3/screen_locked.png</code>
 <h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Autologin in LightDM</h3>
 
 <p align="right">Fill in <font color="#A6E22E">/etc/lightdm/lightdm.conf</font></p>
-<code>autologin-user=<br>
+<code>[SeatDefaults]<br>
+autologin-user=<br>
 autologin-session=<br>
 autologin-user-timeout=0</code>
 
@@ -496,11 +497,13 @@ user ALL=(ALL:ALL) ALL</code>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Set date and locales in Debian</h3>
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Set date and locales</h3>
 
 <code>sudo dpkg-reconfigure locales<br>
 sudo dpkg-reconfigure tzdata<br>
-sudo date MMDDhhmm</code>
+sudo date MMDDhhmm<br>
+<br>
+timedatectl set-time "yyyy-MM-dd hh:mm:ss"</code>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -764,7 +767,7 @@ pacman -Syyu</code>
 <code>[multilib]<br>
 Include = /etc/pacman.d/mirrorlist</code>
 <code>sudo pacman -Syyu<br>
-sudo pacman -S skype<br>
+yaourt -S skype<br>
 sudo pacman -S lib32-libpulse lib32-alsa-plugins</code>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
