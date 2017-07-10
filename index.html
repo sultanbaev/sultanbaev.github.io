@@ -833,8 +833,18 @@ sudo ip link show enp3s0 (Ex.: 10:c3:7b:4b:e9:6a)</code>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CPU info</h3>
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>System information</h3>
+
+<p>CPU</p>
 <code>lscpu</code>
+
+<p>CPU, MB, RAM</p>
+<code>sudo pacman -S lshw<br>
+ sudo lshw</code>
+
+<p>HDD temp</p>
+<code>sudo pacman -S hddtemp<br>
+sudo hddtemp /dev/sda</code>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
