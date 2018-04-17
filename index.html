@@ -877,6 +877,216 @@ sudo hddtemp /dev/sda</code>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Profsystems</h3>
+
+<script type="text/javascript">
+window.onload = function(){
+    var select = document.forms['select'].elements, i = select.length;
+    while(i--){
+        select[i].onchange = function(){
+            //document.forms['input'].elements[0].value += this[this.selectedIndex].text + ' ';
+            document.forms['input'].elements[0].value += this[this.selectedIndex].text + ' ';
+        };
+    }
+};
+</script>
+
+<form action="" method="post" name="select">
+
+<table>
+
+  <tr>
+    <td align="right"><font color="#75715E">ПРОФИЛАКТИКА</font></td>
+    <td align="left"><font color="#75715E">
+        <select style='width:200px'>
+          <option value="none" selected="selected" disabled></option>
+          <option value="ok">ПРОФИЛАКТИКА -- ок;</option>
+          <option value="noneResult">ПРОФИЛАКТИКА -- безрезультатно;</option>
+          <option value="overHeat">ПРОФИЛАКТИКА -- перегрев;</option>
+          <option value="upperEdgeNorm">ПРОФИЛАКТИКА -- верхняя граница нормы;</option>
+          <option value="bsod">ПРОФИЛАКТИКА -- BSOD;</option>
+          <option value="overHeatWithProf">ПРОФИЛАКТИКА -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
+          <option value="overHeatWithProfDen">ПРОФИЛАКТИКА -- перегрев - рекомендуется профилактика с заменой термопасты - клиент отказался;</option>
+        </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">ТЕРМОПАСТА</font></td>
+    <td align="left"><font color="#75715E">
+        <select style='width:200px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="ok">ТЕРМОПАСТА -- ок;</option>
+        <option value="noneResult">ТЕРМОПАСТА -- безрезультатно;</option>
+        <option value="overHeat">ТЕРМОПАСТА -- перегрев;</option>
+        <option value="upperEdgeNorm">ТЕРМОПАСТА -- верхняя граница нормы;</option>
+        <option value="bsod">ТЕРМОПАСТА -- BSOD;</option>
+        <option value="overHeatWithProf">ТЕРМОПАСТА -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
+   </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">RAM</font></td>
+    <td align="left"><font color="#75715E">
+      <select style='width:200px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="ok">RAM -- ок;</option>
+        <option value="badRam">RAM -- битые ячейки памяти;</option>
+      </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">HDD</font></td>
+    <td align="left"><font color="#75715E">
+   <select style='width:200px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="ok">HDD -- ок;</option>
+        <option value="badsector">HDD -- битые сектора;</option>
+        <option value="badSectorClosed">HDD -- битые сектора - закрыты;</option>
+        <option value="overHeatHdd">HDD -- перегрев;</option>
+   </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">S.M.A.R.T.</font></td>
+    <td align="left"><font color="#75715E">
+   <select style='width:200px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="ok">S.M.A.R.T. -- ок;</option>
+        <option value="badSmart">S.M.A.R.T. -- неисправен по нескольким параметрам;</option>
+   </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">ДАННЫЕ</font></td>
+    <td align="left"><font color="#75715E">
+   <select style='width:200px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="nothingImportant">ДАННЫЕ -- важных нет;</option>
+        <option value="dPath">ДАННЫЕ -- d:/_saved_dd_mm_2018;</option>
+   </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">WIN</font></td>
+    <td align="left"><font color="#75715E">
+   <select style='width:60px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="xp">WINXP</option>
+        <option value="7">WIN7</option>
+        <option value="81">WIN8.1</option>
+        <option value="10">WIN10</option>
+   </select>
+      <select style='width:60px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="actUpdDis">(акт., обн. откл., сл. обн. откл., обн. в пол. без. откл.) -- </option>
+        <option value="actUpdDisSpDis">(акт., обн. откл., сл. обн. откл., обн. в пол. без. откл., слеж. откл.) -- </option>
+        <option value="clients"> (польз.) -- </option>    
+   </select>
+   <select style='width:60px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="ok">ок;</option>
+        <option value="needToRepaire">рекомендуется восстановление ОС;</option>
+        <option value="osNotTouched">манипуляции с ОС не проводились;</option>
+   </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">ДРАЙВЕРА</font></td>
+    <td align="left"><font color="#75715E">
+   <select style='width:200px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="ok">ДРАЙВ -- ок;</option>
+        <option value="ofDrvAbs">ДРАЙВ -- отсутствует официальный драйвер на;</option>
+        <option value="drvAbs">ДРАЙВ -- не установлен драйвер на;</option>
+   </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">ПРОГРАММЫ</font></td>
+    <td align="left"><font color="#75715E">
+   <select style='width:200px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="ok">ПРОГР -- ок;</option>
+        <option value="cantInstall">ПРОГР -- нет возможности установить;</option>
+   </select>
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">КАСПЕРСКИЙ</font></td>
+    <td align="left"><font color="#75715E">
+   <select style='width:200px'>
+        <option value="none" selected="selected" disabled></option>
+        <option value="ok">КАСП -- ок;</option>
+        <option value="cantInstall">КАСП -- нет возможности установить;</option>
+        <option value="ramIsNotEnUDS">КАСП -- недостаточно ОЗУ - установлен USB Disk Security;</option>
+        <option value="ramIsNotEnUDSandKav">КАСП -- недостаточно ОЗУ - установлен Kaspersky и USB Disk Security;</option>
+   </select>
+    </font></td>
+  </tr>
+
+  <tr>
+    <td align="right"><font color="#75715E">AIDA</font></td>
+    <td align="left"><font color="#75715E">
+        <select style='width:200px'>
+          <option value="none" selected="selected" disabled></option>
+          <option value="ok">AIDA -- ок;</option>
+          <option value="noneResult">AIDA -- безрезультатно;</option>
+          <option value="overHeat">AIDA -- перегрев;</option>
+          <option value="upperEdgeNorm">AIDA -- верхняя граница нормы;</option>
+          <option value="bsod">AIDA -- BSOD;</option>
+          <option value="overHeatWithProf">AIDA -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
+        </select>
+    </font></td>
+  </tr>
+
+  <tr>
+    <td align="right"><font color="#75715E">HEAVYLOAD</font></td>
+    <td align="left"><font color="#75715E">
+        <select style='width:200px'>
+          <option value="none" selected="selected" disabled></option>
+          <option value="ok">HEAVYLOAD -- ок;</option>
+          <option value="noneResult">HEAVYLOAD -- безрезультатно;</option>
+          <option value="overHeat">HEAVYLOAD -- перегрев;</option>
+          <option value="upperEdgeNorm">HEAVYLOAD -- верхняя граница нормы;</option>
+          <option value="bsod">HEAVYLOAD -- BSOD;</option>
+          <option value="overHeatWithProf">HEAVYLOAD -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
+        </select>
+    </font></td>
+  </tr>
+
+  <tr>
+    <td align="right"><font color="#75715E">СКРЫТЫЕ ДЕФЕКТЫ</font></td>
+    <td align="left"><font color="#75715E">
+        <select style='width:200px'>
+          <option value="none" selected="selected" disabled></option>
+          <option value="notFoond">СКРЫТЫЕ ДЕФЕКТЫ -- не выявлены</option>
+        </select>
+    </font></td>
+  </tr>
+</table>
+</form>
+
+<p align="right"><font color="#A6E22E">Sum up</font></p>
+
+<form action="" method="post" name="input">
+  <textarea name="comment" style='width:100%' rows="10"></textarea>
+</form>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 <!--<div>
   <a onclick="hidebottom('div1'); return false;" href="#" rel="nofollow"><p align="center">...</p></a>
     <div style="display:none;" id="div1">

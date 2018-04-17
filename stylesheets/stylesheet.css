@@ -26,6 +26,20 @@ h1, h2, h3, h4, h5, h6 {
   margin: 100px 0 20px;
 }
 
+textarea {
+  resize: none;
+  background:#272822;
+  color: #75715E;
+  border-color: #272822;
+  border: 1px dashed #75715E;
+}
+
+select {
+  background:#75715E;
+  border-color: #272822;
+  color: #F8F8F0;
+}
+
 li {
   line-height: 1.4 ;
 }
@@ -81,6 +95,7 @@ header h2 {
 #main_content {
   width: 100%;
   -webkit-font-smoothing: antialiased;
+
 }
 section img {
   max-width: 100%
