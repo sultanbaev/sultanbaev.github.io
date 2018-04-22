@@ -85,18 +85,18 @@
 <a href="http://www.ci.nsu.ru/?page_id=39">Schedule</a> |-->
 <a href="http://tmtheme-editor.herokuapp.com/#/theme/Monokai">Monokai</a>
 <hr>
-<a href="https://lk.open-broker.ru/users/login">Open Broker</a> |
-<a href="http://online.openbank.ru/">Online Open Bank</a> |
+<!--<a href="https://lk.open-broker.ru/users/login">Open Broker</a> |
+<a href="http://online.openbank.ru/">Online Open Bank</a> |-->
 <a href="https://zenmoney.ru/">Zenmoney</a>
 <hr>
-<a href="https://www.youtube.com/watch?v=YlhPRuAve8k&list=PLdl7lj9IwWtGMAC-gAsxtuBdvfv4YZVei">BRITISH INVASION</a> |
-<a href="https://www.youtube.com/watch?v=DohRa9lsx0Q&list=PLK9Sc5q_4K6aNajVLKtkaAB1JGmKyccf2">70809000</a> |
+<!--<a href="https://www.youtube.com/watch?v=YlhPRuAve8k&list=PLdl7lj9IwWtGMAC-gAsxtuBdvfv4YZVei">BRITISH INVASION</a> |
+<a href="https://www.youtube.com/watch?v=DohRa9lsx0Q&list=PLK9Sc5q_4K6aNajVLKtkaAB1JGmKyccf2">70809000</a> |-->
 <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm/related?hl=rul">ublock</a> |
+<a href="https://chrome.google.com/webstore/detail/frigate-cdn-smooth-access/mbacbcfdfaapbcnlnbmciiaakomhkbkb">frigate</a> |
 <a href="https://webcamtest.ru/">webcam</a> |
 <a href="https://online-voice-recorder.com/ru/">mic</a> |
 <a href="http://key-test.ru/">keyboard</a>
 <hr>
-<a href="./downloads/rescue_usb.zip" target="_blank">rescue usb</a> |
 <a href="http://ftp.dns-shop.ru/Notebooks/" target="_blank">DNS DRV</a> |
 <a href="http://boot-keys.org/" target="_blank">Boot keys</a>
 
@@ -896,33 +896,37 @@ window.onload = function(){
 <table>
 
   <tr>
-    <td align="right"><font color="#75715E">ПРОФИЛАКТИКА</font></td>
+    <td align="right"><font color="#75715E">ПРОФ + ТЕРМ</font></td>
     <td align="left"><font color="#75715E">
         <select style='width:200px'>
           <option value="none" selected="selected" disabled></option>
-          <option value="ok">ПРОФИЛАКТИКА -- ок;</option>
-          <option value="noneResult">ПРОФИЛАКТИКА -- безрезультатно;</option>
-          <option value="overHeat">ПРОФИЛАКТИКА -- перегрев;</option>
-          <option value="upperEdgeNorm">ПРОФИЛАКТИКА -- верхняя граница нормы;</option>
-          <option value="bsod">ПРОФИЛАКТИКА -- BSOD;</option>
-          <option value="overHeatWithProf">ПРОФИЛАКТИКА -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
-          <option value="overHeatWithProfDen">ПРОФИЛАКТИКА -- перегрев - рекомендуется профилактика с заменой термопасты - клиент отказался;</option>
+          <option value="ok">ПРОФ + ТЕРМ -- ок;</option>
+          <option value="noneResult">ПРОФ + ТЕРМ -- безрезультатно;</option>
+          <option value="overHeat">ПРОФ + ТЕРМ -- перегрев;</option>
+          <option value="upperEdgeNorm">ПРОФ + ТЕРМ -- верхняя граница нормы;</option>
+          <option value="overHeatWithProf">ПРОФ + ТЕРМ -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
+          <option value="overHeatWithProfDen">ПРОФ + ТЕРМ -- перегрев - рекомендуется профилактика с заменой термопасты - клиент отказался;</option>
         </select>
     </font></td>
   </tr>
 
-  <tr align="left">
-    <td align="right"><font color="#75715E">ТЕРМОПАСТА</font></td>
+  <tr>
+    <td align="right"><font color="#75715E">ПИТАНИЕ</font></td>
     <td align="left"><font color="#75715E">
         <select style='width:200px'>
-        <option value="none" selected="selected" disabled></option>
-        <option value="ok">ТЕРМОПАСТА -- ок;</option>
-        <option value="noneResult">ТЕРМОПАСТА -- безрезультатно;</option>
-        <option value="overHeat">ТЕРМОПАСТА -- перегрев;</option>
-        <option value="upperEdgeNorm">ТЕРМОПАСТА -- верхняя граница нормы;</option>
-        <option value="bsod">ТЕРМОПАСТА -- BSOD;</option>
-        <option value="overHeatWithProf">ТЕРМОПАСТА -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
-   </select>
+          <option value="none" selected="selected" disabled></option>
+          <option value="">БП -- ок;</option>
+          <option value="">БП -- неисправен;</option>
+          <option value="">БП -- неисправен - заменен;</option>
+          <option value="">БП -- поврежден - рекомендуется замена;</option>
+          <option value="">БП -- поврежден - рекомендуется замена - клиент отказался;</option>
+
+          <option value="">ЗУ -- ок;</option>
+
+          <option value="">РАЗЪЕМ ПИТАНИЯ -- неисправен;</option>
+          <option value="">РАЗЪЕМ ПИТАНИЯ -- неисправен - заменен;</option>
+          <option value="">РАЗЪЕМ ПИТАНИЯ -- неисправен - необходима замена - клиент отказался;</option>
+        </select>
     </font></td>
   </tr>
 
@@ -933,6 +937,7 @@ window.onload = function(){
         <option value="none" selected="selected" disabled></option>
         <option value="ok">RAM -- ок;</option>
         <option value="badRam">RAM -- битые ячейки памяти;</option>
+        <option value="notReadRam">RAM -- не определяется;</option>
       </select>
     </font></td>
   </tr>
@@ -945,7 +950,10 @@ window.onload = function(){
         <option value="ok">HDD -- ок;</option>
         <option value="badsector">HDD -- битые сектора;</option>
         <option value="badSectorClosed">HDD -- битые сектора - закрыты;</option>
-        <option value="overHeatHdd">HDD -- перегрев;</option>
+        <option value="badHdd">HDD -- не определяется;</option>
+        <option value="mbrToGptDoneHdd">HDD -- конвертирован MBR -> GPT;</option>
+        <option value="mbrToGptHdd">HDD -- рекомендуется конвертирование MBR -> GPT;</option>
+        <option value="mbrToGptOsRepaireHdd">HDD -- рекомендуется конвертирование MBR -> GPT с восстановлением ОС;</option>
    </select>
     </font></td>
   </tr>
@@ -968,12 +976,13 @@ window.onload = function(){
         <option value="none" selected="selected" disabled></option>
         <option value="nothingImportant">ДАННЫЕ -- важных нет;</option>
         <option value="dPath">ДАННЫЕ -- d:/_saved_dd_mm_2018;</option>
+        <option value="couldnSave">ДАННЫЕ -- сохранить не удалось;</option>
    </select>
     </font></td>
   </tr>
 
   <tr align="left">
-    <td align="right"><font color="#75715E">WIN</font></td>
+    <td align="right"><font color="#75715E">ОС</font></td>
     <td align="left"><font color="#75715E">
    <select style='width:60px'>
         <option value="none" selected="selected" disabled></option>
@@ -981,18 +990,22 @@ window.onload = function(){
         <option value="7">WIN7</option>
         <option value="81">WIN8.1</option>
         <option value="10">WIN10</option>
+        <option value="linux">LINUX</option>
    </select>
       <select style='width:60px'>
         <option value="none" selected="selected" disabled></option>
-        <option value="actUpdDis">(акт., обн. откл., сл. обн. откл., обн. в пол. без. откл.) -- </option>
-        <option value="actUpdDisSpDis">(акт., обн. откл., сл. обн. откл., обн. в пол. без. откл., слеж. откл.) -- </option>
-        <option value="clients"> (польз.) -- </option>    
+        <option value="actUpdDis"> (акт., обн. откл., сл. обн. откл., обн. в пол. без. откл.) -- </option>
+        <option value="actUpdDisSpDis"> (акт., обн. откл., сл. обн. откл., обн. в пол. без. откл., слеж. откл.) -- </option>
+        <option value="clients"> (польз.) -- </option>
+        <option value="clients">  -- </option>
    </select>
    <select style='width:60px'>
         <option value="none" selected="selected" disabled></option>
         <option value="ok">ок;</option>
-        <option value="needToRepaire">рекомендуется восстановление ОС;</option>
         <option value="osNotTouched">манипуляции с ОС не проводились;</option>
+        <option value="needToRepaire">рекомендуется восстановление ОС;</option>
+        <option value="needToRepaire">рекомендуется восстановление ОС в режиме UEFI;</option>
+        <option value="needToRepaireLinux">рекомендуется корректная разменка разделов и переустановка ОС;</option>
    </select>
     </font></td>
   </tr>
@@ -1039,11 +1052,10 @@ window.onload = function(){
         <select style='width:200px'>
           <option value="none" selected="selected" disabled></option>
           <option value="ok">AIDA -- ок;</option>
-          <option value="noneResult">AIDA -- безрезультатно;</option>
-          <option value="overHeat">AIDA -- перегрев;</option>
-          <option value="upperEdgeNorm">AIDA -- верхняя граница нормы;</option>
           <option value="bsod">AIDA -- BSOD;</option>
-          <option value="overHeatWithProf">AIDA -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
+          <option value="upperEdgeNorm">AIDA -- верхняя граница нормы;</option>
+          <option value="overHeat">AIDA -- перегрев;</option>
+          <option value="load">AIDA -- тест под нагрузкой не пройден;</option>
         </select>
     </font></td>
   </tr>
@@ -1054,12 +1066,10 @@ window.onload = function(){
         <select style='width:200px'>
           <option value="none" selected="selected" disabled></option>
           <option value="ok">HEAVYLOAD -- ок;</option>
-          <option value="noneResult">HEAVYLOAD -- безрезультатно;</option>
-          <option value="overHeat">HEAVYLOAD -- перегрев;</option>
-          <option value="upperEdgeNorm">HEAVYLOAD -- верхняя граница нормы;</option>
           <option value="bsod">HEAVYLOAD -- BSOD;</option>
-          <option value="overHeatWithProf">HEAVYLOAD -- перегрев - рекомендуется профилактика с заменой термопасты;</option>
-        </select>
+          <option value="script">HEAVYLOAD -- скрипт HEAVYLOAD-REBOOT (Xm * Yi) - пройден;</option>
+          <option value="script">HEAVYLOAD -- скрипт HEAVYLOAD-REBOOT (Xm * Yi) - не пройден;</option>
+          </select>
     </font></td>
   </tr>
 
@@ -1068,7 +1078,8 @@ window.onload = function(){
     <td align="left"><font color="#75715E">
         <select style='width:200px'>
           <option value="none" selected="selected" disabled></option>
-          <option value="notFoond">СКРЫТЫЕ ДЕФЕКТЫ -- не выявлены</option>
+          <option value="notFound">СКРЫТЫЕ ДЕФЕКТЫ -- не выявлены</option>
+          <option value="found">СКРЫТЫЕ ДЕФЕКТЫ -- выявлены:</option>
         </select>
     </font></td>
   </tr>
