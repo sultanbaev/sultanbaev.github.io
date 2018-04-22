@@ -52,6 +52,7 @@ select {
   background:#272822;
   border: 1px dashed #75715E;
   color: #F8F8F0;
+  outline: none;
 }
 
 li {
