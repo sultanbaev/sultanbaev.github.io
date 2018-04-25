@@ -920,11 +920,10 @@ window.onload = function(){
           <option value="">БП -- неисправен - заменен;</option>
           <option value="">БП -- поврежден - рекомендуется замена;</option>
           <option value="">БП -- поврежден - рекомендуется замена - клиент отказался;</option>
-
           <option value="">ЗУ -- ок;</option>
-
           <option value="">РАЗЪЕМ ПИТАНИЯ -- неисправен;</option>
           <option value="">РАЗЪЕМ ПИТАНИЯ -- неисправен - заменен;</option>
+          <option value="">РАЗЪЕМ ПИТАНИЯ -- крепление повреждено - закреплен на термоклей;</option>
           <option value="">РАЗЪЕМ ПИТАНИЯ -- неисправен - необходима замена - клиент отказался;</option>
         </select>
     </font></td>
@@ -975,8 +974,9 @@ window.onload = function(){
    <select style='width:200px'>
         <option value="none" selected="selected" disabled></option>
         <option value="nothingImportant">ДАННЫЕ -- важных нет;</option>
-        <option value="dPath">ДАННЫЕ -- d:/_saved_dd_mm_2018;</option>
         <option value="couldnSave">ДАННЫЕ -- сохранить не удалось;</option>
+        <option value="">ДАННЫЕ -- манипуляции с данными не проводились;</option>
+        <option value="dPath">ДАННЫЕ -- d:/_saved_dd_mm_2018;</option>
    </select>
     </font></td>
   </tr>
@@ -1067,8 +1067,8 @@ window.onload = function(){
           <option value="none" selected="selected" disabled></option>
           <option value="ok">HEAVYLOAD -- ок;</option>
           <option value="bsod">HEAVYLOAD -- BSOD;</option>
-          <option value="script">HEAVYLOAD -- скрипт HEAVYLOAD-REBOOT (Xm * Yi) - пройден;</option>
-          <option value="script">HEAVYLOAD -- скрипт HEAVYLOAD-REBOOT (Xm * Yi) - не пройден;</option>
+          <option value="script">HEAVYLOAD -- скрипт HEAVYLOAD-REBOOT (Xm*Yi) - пройден;</option>
+          <option value="script">HEAVYLOAD -- скрипт HEAVYLOAD-REBOOT (Xm*Yi) - не пройден;</option>
           </select>
     </font></td>
   </tr>
@@ -1079,7 +1079,41 @@ window.onload = function(){
         <select style='width:200px'>
           <option value="none" selected="selected" disabled></option>
           <option value="notFound">СКРЫТЫЕ ДЕФЕКТЫ -- не выявлены</option>
-          <option value="found">СКРЫТЫЕ ДЕФЕКТЫ -- выявлены:</option>
+          <option value="">АУДИОВЫХОД -- посторонний предмет в разъеме;</option>
+          <option value="">АУДИОВЫХОД -- поврежден;</option>
+          <option value="">БП -- вздутые конденсаторы;</option>
+          <option value="">БП -- вздутые конденсаторы - заменены;</option>
+          <option value="">КЛАВИАТУРА -- неисправна;</option>
+          <option value="">КЛАВИАТУРА -- неисправна - заменена;</option>
+          <option value="">КЛАВИАТУРА -- неисправна - необходима замена - клиент отказался;</option>
+          <option value="">КНОПКА ПИТАНИЯ -- неисправна;</option>
+          <option value="">КНОПКА ПИТАНИЯ -- неисправна - заменена;</option>
+          <option value="">КНОПКА ПИТАНИЯ -- неисправна - необходима замена - клиент отказался;</option>
+          <option value="">КОРПУС -- вскрывался до СЦ;</option>
+          <option value="">КОРПУС -- вскрывался до СЦ - сломаные элементы крепления корпуса;</option>
+          <option value="">КОРПУС -- посторонние предметы внутри корпуса;</option>
+          <option value="">КОРПУС -- посторонние металлические предметы внутри корпуса;</option>
+          <option value="">КОРПУС -- нехватает болтов;</option>
+          <option value="">КОРПУС -- ножка отсутствует;</option>
+          <option value="">КОРПУС -- трещины корпуса в нескольких местах;</option>
+          <option value="">МАТЕРИНСКАЯ ПЛАТА -- вздутые конденсаторы;</option>
+          <option value="">МАТЕРИНСКАЯ ПЛАТА -- вздутые конденсаторы - заменены;</option>
+          <option value="">МАТЕРИНСКАЯ ПЛАТА -- выгоревший элемент платы;</option>
+          <option value="">МАТЕРИНСКАЯ ПЛАТА -- многочисленные выгоревшие элементы платы;</option>
+          <option value="">МАТРИЦА -- повреждена;</option>
+          <option value="">МАТРИЦА -- неисправна - заменена;</option>
+          <option value="">МАТРИЦА -- неисправна - необходима замена - клиент отказался;</option>
+          <option value="">ОХЛАЖДЕНИЕ -- корпусный вентилятор неисправен;</option>
+          <option value="">ОХЛАЖДЕНИЕ -- корпусный вентилятор неисправен - заменен;</option>
+          <option value="">ОХЛАЖДЕНИЕ -- корпусный вентилятор неисправен - необходима замена - клиент отказался;</option>
+          <option value="">ПЕРЕДНЯЯ ПАНЕЛЬ -- USB неисправен;</option>
+          <option value="">ПЕРЕДНЯЯ ПАНЕЛЬ -- USB поврежден;</option>
+          <option value="">ПЕРЕДНЯЯ ПАНЕЛЬ -- аудиовыход неисправен;</option>
+          <option value="">ПЕРЕДНЯЯ ПАНЕЛЬ -- аудиовыход поврежден;</option>
+          <option value="">BIOS -- неисправность микросхемы - микропроцессорный код обновлен;</option>
+          <option value="">EC-BIOS -- неисправность микросхемы - микропроцессорный код обновлен;</option>
+          <option value="">USB -- неисправен;</option>
+          <option value="">USB -- поврежден;</option>
         </select>
     </font></td>
   </tr>
