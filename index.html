@@ -62,9 +62,9 @@
 <a href="http://www.penpalworld.com/profile.asp?uid=10972567">PenPalWorld</a> |
 <a href="https://www.duolingo.com/svvitaly">DuoLingo</a> -->
 <hr>
-<a href="https://github.com/sultanbaev">Github</a> |
+<a href="https://github.com/sultanbaev">Github</a><!-- |
 <a href="http://sultanbaev.github.io/">sultanbaev</a> |
-<a href="http://rogerdudler.github.io/git-guide/">Github Commands</a>       
+<a href="http://rogerdudler.github.io/git-guide/">Github Commands</a>-->
 <hr>
 <a href="https://beta.gismeteo.ru/weather-uchaly-4592/10-days/#/wind.precipitation.pressure.humidity/">GU</a> |
 <a href="https://beta.gismeteo.ru/weather-mostovskoy-11372/10-days/#/wind.precipitation.pressure.humidity/">GM</a>
@@ -76,8 +76,9 @@
 <a href="https://www.youtube.com/feed/subscriptions">Youtube</a> |
 <!--<a href="https://www.linux.org.ru/gallery/">LOR</a> |
 <a href="https://geektimes.ru/">Geektimes</a> |-->
-<a href="http://novate.ru/">Novate</a>
+<a href="http://novate.ru/">Novate</a> |
 <!--<a href="http://inmyroom.ru/">Inmyroom</a> -->
+<a href="https://alexgyver.ru/18650/">Alex Gyver</a>
 
 <hr>
 <!--<a href="http://www.whatismymovie.com/results?text=time+traveler+in+space">Find Movie</a> |-->
@@ -1094,7 +1095,7 @@ window.onload = function(){
           <option value="">КОРПУС -- вскрывался до СЦ - сломаные элементы крепления корпуса;</option>
           <option value="">КОРПУС -- посторонние предметы внутри корпуса;</option>
           <option value="">КОРПУС -- посторонние металлические предметы внутри корпуса;</option>
-          <option value="">КОРПУС -- нехватает болтов;</option>
+          <option value="">КОРПУС -- не хватает болтов;</option>
           <option value="">КОРПУС -- ножка отсутствует;</option>
           <option value="">КОРПУС -- трещины корпуса в нескольких местах;</option>
           <option value="">МАТЕРИНСКАЯ ПЛАТА -- вздутые конденсаторы;</option>
@@ -1126,6 +1127,41 @@ window.onload = function(){
 <form action="" method="post" name="input">
   <textarea name="comment" style='width:100%' rows="10"></textarea>
 </form>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elementary OS</h3>
+
+<p>Mplayer without GUI in Applications menu</p>
+<p align="right">Create <font color="#A6E22E">~/.local/share/applications/mplayer.desktop</font></p>
+<code>[Desktop Entry]<br>
+Version=1.0<br>
+Type=Application<br>
+Name=mplayer<br>
+Comment=mplayer<br>
+TryExec=mplayer<br>
+Exec=mplayer %F<br>
+Icon=mplayer<br>
+? MimeType=image/x-foo;<br>
+Actions=Gallery;Create;</code>
+
+<p>Fix dpkg lock</p>
+<code>sudo rm /var/cache/apt/archives/lock<br>
+sudo rm /var/lib/dpkg/lock</code>
+
+<p>Allow PPAs and install from it</p>
+<code>sudo apt install software-properties-common<br>
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer<br>
+sudo apt-get update<br>
+sudo apt-get install grub-customizer</code>
+
+<p>Install from *.run</p>
+<code>sudo chmod +x SOME-APP.run<br>
+sudo ./SOME-APP.run</code>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
