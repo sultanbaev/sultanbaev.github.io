@@ -1192,6 +1192,33 @@ youtube-dl -x --audio-format "mp3" --audio-quality 0 https://www.youtube.com/LIN
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Execute script after resuming from hibernation in Q4OS KDE Debian 10 Buster</h3>
+
+<p align="right">Create <font color="#A6E22E">~/after_hib.sh</font></p>
+<code>sudo rmmod r8169 && sudo modprobe r8169</code>
+
+<p align="right">Create <font color="#A6E22E">/etc/systemd/system/myscript.service</font></p>
+<code>[Unit]<br>
+Description=Run myscripttorun<br>
+#After=suspend.target<br>
+After=hibernate.target<br>
+#After=hybrid-sleep.target<br>
+[Service]<br>
+ExecStart=~/after_hib.sh<br>
+[Install]<br>
+#WantedBy=suspend.target<br>
+WantedBy=hibernate.target<br>
+#WantedBy=hybrid-sleep.target</code>
+
+<p>Enable with</p>
+<code>sudo systemctl enable myscript.service</code>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 <!--<div>
   <a onclick="hidebottom('div1'); return false;" href="#" rel="nofollow"><p align="center">...</p></a>
     <div style="display:none;" id="div1">
