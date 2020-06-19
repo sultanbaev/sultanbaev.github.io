@@ -1259,14 +1259,14 @@ sudo umount /mnt/iso/</code>
   <tr>
     <td align="right"><font color="#75715E"><label for="requestnumber">НОМЕР ЗАЯВКИ</label></font></td>
     <td align="left"><font color="#75715E">
-    	<input id="requestnumber" type="text" placeholder="1234">
+    	<input id="requestnumber" type="text" placeholder="1234" size="24">
     </font></td>
   </tr>
 
   <tr>
     <td align="right"><font color="#75715E"><label for="requestdate">ДАТА ПОСТУПЛЕНИЯ</label></font></td>
     <td align="left"><font color="#75715E">
-        <input id="requestdate" type="text" placeholder="20 июня 2020">
+        <input id="requestdate" type="text" placeholder="20 июня 2020" size="24">
     </font></td>
   </tr>
 
@@ -1275,6 +1275,25 @@ sudo umount /mnt/iso/</code>
     <td align="left"><font color="#75715E">
       <label for="pcn">ПЦН</label><input id="pcn" type="radio" name="ukus" value="pcn" checked>
       <label for="batyr">Батыр</label><input id="batyr" type="radio" name="ukus" value="batyr">
+    </font></td>
+  </tr>
+
+  <tr align="left">
+    <td align="right"><font color="#75715E">ОПИСАНИЕ НЕИСПРАВНОСТИ</font></td>
+    <td align="left"><font color="#75715E">
+      <select id="ddlViewBy" style='width:200px'>
+        <option value="none" selected="selected" enabled></option>
+        <option value="noimage">потеря изображения</option>
+        <option value="noimageperiodically">периодическая потеря изображения</option>
+        <option value="imagescrambled">помехи при выводе изображения</option>
+      </select>
+    </font></td>
+  </tr>
+
+  <tr>
+    <td align="right"><font color="#75715E"><label for="camnumber">НОМЕР КАМЕРЫ</label></font></td>
+    <td align="left"><font color="#75715E">
+    	<input id="camnumber" type="text" placeholder="42" size="24">
     </font></td>
   </tr>
 
