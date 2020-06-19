@@ -10,8 +10,6 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-//let storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
-
 let storyText = 'После поступления заявки №/_____ВВЕДИТЕ НОМЕР ЗАЯВКИ_____/ от FROMWHOM /_____ВВЕДИТЕ ДАТУ ПОСТУПЛЕНИЯ ЗАЯВКИ_____/ года о периодической потере изображения с камеры наружного видеонаблюдения №60 была проведена диагностика оборудования и установлен выход из строя :inserty: вследствие :insertz:.';
 
 let insertX = ['spontaneously combusted','melted into a puddle on the sidewalk','turned into a slug and crawled away'];
