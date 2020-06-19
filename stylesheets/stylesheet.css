@@ -55,6 +55,22 @@ select {
   outline: none;
 }
 
+input {
+  /*background:#75715E;
+  border-color: #272822;
+  color: #F8F8F0;*/
+  background:#272822;
+  border: 1px dashed #75715E;
+  color: #F8F8F0;
+  outline: none;
+}
+
+input::placeholder {
+  color: #75715E;
+  text-align: center;
+
+}
+
 li {
   line-height: 1.4 ;
 }
