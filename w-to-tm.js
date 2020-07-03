@@ -6,17 +6,9 @@ function getSourceFromParsec() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      if (parsec.length == '8') {
-        parsecToCalc = parsec;
-      }
-
-      if (parsec.length == '7') {
-        parsecToCalc = '0' + parsec;
-      }
-
-      if (parsec.length == '6') {
-        parsecToCalc = '00' + parsec;
-      }
+      if (parsec.length == '8') {parsecToCalc = parsec;}
+      if (parsec.length == '7') {parsecToCalc = '0' + parsec;}
+      if (parsec.length == '6') {parsecToCalc = '00' + parsec;}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -31,25 +23,12 @@ function getSourceFromParsec() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//      if (decRightToCalc.length == '5') {
-//        inTxt = decLeft + '' + decRight;
-//        decRight = decRight;
-//          decRightToCalc = decRight;
-//      }
-
-      if (decRightToCalc.length == '4') {
-//        inTxt = decLeft + '0' + decRight;
-        decRightToCalc = '0' + decRightToCalc;
-//        decLeftToCalc = '0' + decRight;
-      }
-
-      if (decRightToCalc.length == '3') {
-//        inTxt = decLeft + '00' + decRight;
-//        decRight = '00' + decRight;
-        decRightToCalc = '00' + decRightToCalc;
-      }
+      if (decRightToCalc.length == '4') {decRightToCalc = '0' + decRightToCalc;}
+      if (decRightToCalc.length == '3') {decRightToCalc = '00' + decRightToCalc;}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    document.getElementById("toWtoTM").value = decLeftToCalc + decRightToCalc;
 
 //    document.getElementById("toWtoTM").value = parsecToCalc;
 //    document.getElementById("toWtoTM").value = hexLeft;
@@ -61,7 +40,6 @@ function getSourceFromParsec() {
 //    document.getElementById("toWtoTM").value = decLeft + ' /0/ ' + decRight;
 
 //    document.getElementById("toWtoTM").value = inTxt;
-    document.getElementById("toWtoTM").value = decLeftToCalc + decRightToCalc;
 //    document.getElementById("toWtoTM").value = decLeftToCalc;
 //    document.getElementById("toWtoTM").value = decRightToCalc;
 //    document.getElementById("toWtoTM").value = decLeft + '/' + decRightToCalc;
