@@ -1028,7 +1028,7 @@ window.onload = function(){
         <option value="osNotTouched">манипуляции с ОС не проводились;</option>
         <option value="needToRepaire">рекомендуется восстановление ОС;</option>
         <option value="needToRepaire">рекомендуется восстановление ОС в режиме UEFI;</option>
-        <option value="needToRepaireLinux">рекомендуется корректная разменка разделов и переустановка ОС;</option>
+        <option value="needToRepaireLinux">рекомендуется корректная разметка разделов и переустановка ОС;</option>
    </select>
     </font></td>
   </tr>
@@ -1312,6 +1312,33 @@ sudo umount /mnt/iso/</code>
 
     <code><p class="story"></p></code>
     <script src="ugok.js"></script>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parsec to Bolid (Wiegand to TouchMemory)</h3>
+
+    <div>
+      <center><button type="button" onclick="getSourceFromParsec()">Конвертировать</button></center>
+    </div>
+
+    <br>
+
+	<table>
+	  <tr>
+	    <td align="center">
+	    	<textarea id="sourceFromParsec" name="sourceFromParsec" rows="10" cols="20">612344</textarea>
+	    </td>
+	    <td align="center">
+	    	<textarea id="toWtoTM" name="toWtoTM" rows="10" cols="20"></textarea>
+	    </td>
+	  </tr>
+	</table>
+
+    <script src="w-to-tm.js"></script>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
