@@ -30,20 +30,6 @@ function getSourceFromParsec() {
 
     document.getElementById("toWtoTM").value = decLeftToCalc + decRightToCalc;
 
-//    document.getElementById("toWtoTM").value = parsecToCalc;
-//    document.getElementById("toWtoTM").value = hexLeft;
-//    document.getElementById("toWtoTM").value = hexRight;
-//    document.getElementById("toWtoTM").value = hexLeft + ' / ' + hexRight;
-
-//    document.getElementById("toWtoTM").value = decLeft;
-//    document.getElementById("toWtoTM").value = decRight;
-//    document.getElementById("toWtoTM").value = decLeft + ' /0/ ' + decRight;
-
-//    document.getElementById("toWtoTM").value = inTxt;
-//    document.getElementById("toWtoTM").value = decLeftToCalc;
-//    document.getElementById("toWtoTM").value = decRightToCalc;
-//    document.getElementById("toWtoTM").value = decLeft + '/' + decRightToCalc;
-
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
