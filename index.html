@@ -1356,8 +1356,9 @@ sudo umount /mnt/iso/</code>
 <code><font color="#F92672">Switch#</font> show version //OS version, uptime<br>
 <br>
 <font color="#F92672">Switch#</font> sh vlan<br>
+<font color="#F92672">Switch#</font> sh int status<br>
 <br>
-<font color="#F92672">Switch#</font> sh interf trunk<br>
+<font color="#F92672">Switch#</font> sh int trunk<br>
 <br>
 <font color="#F92672">Switch#</font> sh flash //show config files<br>
 <font color="#F92672">Switch#</font> sh runn //show running-config<br>
@@ -1420,6 +1421,51 @@ sudo umount /mnt/iso/</code>
 <font color="#F92672">Switch(config-if)#</font> do sh port-security //shutdown port if restricted (1 mac)<br>
 <br>
 <font color="#F92672">Switch(config)#</font> show port-security interface fa 0/12</code>
+
+<!--
+
+UGOK
+SB_Klet(config)# service unsupported-transceiver
+SB_Klet(config)# enable secret 5 $1$IPpR$fRR3w4GonI8XiRnGqVtBI/
+SB_Klet(config)# username ugok secret 5 $1$lJKT$/FrmsgwR2xXzCFg/Rvh0/0
+SB_Klet(config)# aaa new-model
+SB_Klet(config)# aaa authentication login LOCAL local
+SB_Klet(config)# aaa session-id common
+
+SB_Klet(config)# clock timezone YEKT 6
+SB_Klet(config)# system mtu 1998
+
+SB_Klet(config)# no ip domain-lookup
+SB_Klet(config)# ip domain-name ugok.ru
+
+SB_Klet(config)# vtp mode transparent
+
+SB_Klet(config)# spanning-tree mode rapid-pvst
+SB_Klet(config)# spanning-tree extend system-id
+SB_Klet(config)# spanning-tree vlan 1-4094 priority 40960
+
+SB_Klet(config)# no errdisable detect cause gbic-invalid
+SB_Klet(config)# errdisable recovery cause all
+SB_Klet(config)# errdisable recovery interval 120
+
+SB_Klet(config)# vlan internal allocation policy ascending
+
+SB_Klet(config-vlan)# crypto key generate rsa general-keys modulus 2048
+
+SB_Klet(config)# ip ssh version 2
+
+SB_Klet(config)# interface Vlan777
+SB_Klet(config-if)# description MGMT
+SB_Klet(config-if)# ip address 10.91.0.115 255.255.255.0
+SB_Klet(config-if)# no ip redirects
+SB_Klet(config-if)# no ip unreachables
+SB_Klet(config-if)# no ip proxy-arp
+SB_Klet(config-if)# load-interval 30
+SB_Klet(config-if)# no sh
+
+SB_Klet(config-if)# ip default-gateway 10.91.0.1
+
+-->
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
