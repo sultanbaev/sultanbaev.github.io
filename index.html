@@ -1350,6 +1350,83 @@ sudo umount /mnt/iso/</code>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cisco configuration</h3>
+
+<p>Basics</p>
+<code><font color="#F92672">Switch#</font> show version //OS version, uptime<br>
+<br>
+<font color="#F92672">Switch#</font> sh vlan<br>
+<br>
+<font color="#F92672">Switch#</font> sh interf trunk<br>
+<br>
+<font color="#F92672">Switch#</font> sh flash //show config files<br>
+<font color="#F92672">Switch#</font> sh runn //show running-config<br>
+<font color="#F92672">Switch#</font> sh startup-config //show startup-config<br>
+<font color="#F92672">Switch#</font> copy running-config startup-config // or<br>
+<font color="#F92672">Switch#</font> copy runn start //save configuration<br>
+<font color="#F92672">Switch#</font> delete flash:/config.text //erase config<br>
+<br>
+<font color="#F92672">Switch#</font> sh ip int brief //brief<br>
+<font color="#F92672">Switch#</font> sh int vlan 1 //detailed<br>
+<br>
+<font color="#F92672">Switch#</font> sh mac address-table<br>
+<br>
+<font color="#F92672">Switch#</font> int fa0/5<br>
+<font color="#F92672">Switch#</font> shut/no shut<br>
+<br>
+<font color="#F92672">Switch#</font> reload //reboot switch</code>
+
+<p>Set name of the curent switch</p>
+<code><font color="#F92672">Switch(config)#</font> hostname HOSTNAME</code>
+
+<p>Create and name vlan</p>
+<code><font color="#F92672">Switch(config)#</font> vlan VLAN-NUMBER<br>
+<font color="#F92672">Switch(config-vlan)#</font> name NAME-OF-VLAN</code>
+
+<p>Interface configuration</p>
+<code><font color="#F92672">Switch(config)#</font> int gi0/42 // or fa0/42 //or<br>
+<font color="#F92672">Switch(config)#</font> int range gi0/42-44<br>
+<font color="#F92672">Switch(config-if)#</font> description DESCRIPTION-OF-INTERFACE<br>
+<font color="#F92672">Switch(config-if)#</font> switchport mode access //or<br>
+<font color="#F92672">Switch(config-if)#</font> switchport mode trunk<br>
+<font color="#F92672">Switch(config-if)#</font> switchport access vlan VLAN-NUMBER // or<br>
+<font color="#F92672">Switch(config-if)#</font> switchport trunk allowed vlan VLAN-NUMBER (vlan 2,101-104) //or<br>
+<font color="#F92672">Switch(config-if)#</font> switchport trunk allowed vlan add 105</code>
+
+<p>Create passwords</p>
+<code><font color="#F92672">Switch(config)#</font> line con 0<br>
+<font color="#F92672">Switch(config-line)#</font> pass cisco123 //CLI password<br>
+<font color="#F92672">Switch(config-line)#</font> login<br>
+<br>
+<font color="#F92672">Switch(config)#</font> enable passw cisco  //privilege mode password<br>
+<font color="#F92672">Switch(config)#</font> enable secret cisco123  //privilege mode encrypted password</code>
+
+<p>Set IP-address</p>
+<code><font color="#F92672">Switch(config)#</font> int vlan 1<br>
+<font color="#F92672">Switch(config-if)#</font> ip add 192.168.10.2 255.255.255.0<br>
+<font color="#F92672">Switch(config-if)#</font> no shut</code>
+
+<p>Telnet-server</p>
+<code><font color="#F92672">Switch(config)#</font> line vty 0 15<br>
+<font color="#F92672">Switch(config-line)#</font> password cisco123<br>
+<font color="#F92672">Switch(config-line)#</font> transport input telnet<br>
+<font color="#F92672">Switch(config-line)#</font> login<br>
+<font color="#F92672">Switch(config-line)#</font> privilege level 15</code>
+
+<p>Port Security (shutdown, restrict or protect?)</p>
+<code><font color="#F92672">Switch(config)#</font> int fa 0/12<br>
+<font color="#F92672">Switch(config-if)#</font> switchport mode access<br>
+<font color="#F92672">Switch(config-if)#</font> switchport port-security<br>
+<font color="#F92672">Switch(config-if)#</font> do sh port-security //shutdown port if restricted (1 mac)<br>
+<br>
+<font color="#F92672">Switch(config)#</font> show port-security interface fa 0/12</code>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 <h3></h3>
       </section>
     </div>
