@@ -59,7 +59,7 @@ function getSourceFromParsec() {
     //document.getElementById("toBolid").value = ';;;;;; ' + checksum + ' 000000 ' + parsec + ' 01 ' + ';;;;';
     //document.getElementById("toBolid").value = checksum;
 
-    alert(checksum);
+    //alert(checksum);
 
 
 }
